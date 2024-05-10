@@ -1,0 +1,119 @@
+body, .full-page-container {
+  background-image: url('./assets/img/banner-bg.png'); /* Adjust the path as needed */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+}
+
+#root .container {
+  transform: translateX(-38px) translateY(36px);
+  padding-left: 6px;
+}
+
+.terminal {
+  background-color: #1e2127;
+  color: #abb2bf;
+  padding: 20px;
+  padding-right: 6px; /* Adjusted */
+  padding-top: 30px; /* Adjusted */
+  font-family: 'Courier New', monospace;
+  border-radius: 10px;
+  width: 539px; /* Specific width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-right: 20px; /* Space between the terminal and text area */
+  margin-top: 8px; /* Specific margin */
+  transform: translateX(429px) translateY(89px); /* Specific transform */
+}
+
+.text-area {
+  width: 40%;  /* Adjust to suit your layout needs */
+  padding: 20px;
+  color: #e7e4e4;  /* Ensures text is readable */
+  font-weight: 700;
+  font-size: 35px;
+  background-color: rgba(244, 244, 244, 0);  /* Adjusted RGBA for clarity */
+  transform: translateX(205px) translateY(-759px); /* Specific transform */
+  min-height: 85px; /* Specific height */
+}
+
+/* Paragraph inside text-area */
+#root .text-area p {
+  transform: translateX(9px) translateY(-30px);
+  width: 1000px; /* Ensured width consistency with the container */
+}
+
+.code-editor {
+  background-color: rgba(255, 255, 255, 0.05); /* Subtle background for the code area */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.terminal pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0; /* Remove margin for pre to fit neatly in the editor */
+}
+
+.job-statuses {
+  margin-top: 20px; /* Space from the code editor */
+}
+
+.job-status {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #28a745; /* Green text for completed jobs */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.success {
+  color: #28a745; /* Bright green for success ticks */
+  margin-left: 10px; /* Space between the job text and the tick */
+}
+
+.terminal button {
+  display: block;
+  width: 200px; /* Fixed width for better control */
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #61dafb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto 0; /* Center the button below the status */
+}
+
+.terminal button:hover {
+  background-color: #4fa7f7;
+}
+
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+
+.background-image-left { /* If you use a background image */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it's behind all other content */
+  opacity: 0.5; /* Optionally set opacity for visibility */
+}
