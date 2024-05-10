@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../TerminalAnimation.css'; // Make sure the path is correct
+import '../TerminalAnimation.css';
 
 const TerminalAnimation = () => {
     const navigate = useNavigate();
     const message = "Help me deploy my portfolio by pressing 'Run Jobs'";
     const [text, setText] = useState('');
-    const [jobsStarted, setJobsStarted] = useState(false); // State to track if jobs have started
-    const [showButton, setShowButton] = useState(true); // State to control button visibility
+    const [jobsStarted, setJobsStarted] = useState(false); 
+    const [showButton, setShowButton] = useState(true); 
     const [jobs, setJobs] = useState([
         { name: 'Build Successful', completed: false },
         { name: 'Test Successful', completed: false },
@@ -15,14 +15,14 @@ const TerminalAnimation = () => {
     ]);
 
     useEffect(() => {
-        if (!jobsStarted) {  // Only run typing effect if jobs have not started
+        if (!jobsStarted) {  
             let ticker = setInterval(() => {
                 tick();
-            }, 40); // Typing effect speed
+            }, 40);
 
             return () => clearInterval(ticker);
         }
-    }, [text, jobsStarted]); // Include jobsStarted in the dependency array
+    }, [text, jobsStarted]); 
 
     const tick = () => {
         let charIndex = text.length;
@@ -33,18 +33,18 @@ const TerminalAnimation = () => {
     };
 
     const runJobs = async () => {
-        setJobsStarted(true);  // Indicate that jobs have started
-        setShowButton(false);  // Hide the button when jobs start
-        setText(''); // Clear the text when starting the jobs
+        setJobsStarted(true);  
+        setShowButton(false); 
+        setText(''); 
         for (let i = 0; i < jobs.length; i++) {
-            await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate each job taking 2 seconds
+            await new Promise(resolve => setTimeout(resolve, 2000)); 
             setJobs(jobs => 
                 jobs.map((job, idx) => 
                     idx === i ? { ...job, completed: true } : job
                 )
             );
         }
-        setTimeout(() => navigate('/MainPage'), 1000); // Navigate after last job is completed
+        setTimeout(() => navigate('/MainPage'), 1000);
     };
 
     return (

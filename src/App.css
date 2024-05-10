@@ -300,13 +300,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  text-align: center; /* Ensure all content is centered */
+  text-align: center; 
   margin-left: 15%;
 }
 .banner .container {
-  max-width: 1200px; /* Set a maximum width for centering */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* Ensure content doesn't stick to the edges */
+  padding: 0 20px; 
 }
 .banner .tagline {
   font-weight: 700;
@@ -894,7 +894,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: color 0.3s ease-in-out;
 }
 .contact ul li a:hover {
-  color: #ccc; /* Adjust hover color */
+  color: #ccc;
 }
 
 @media (max-width: 1366px) {
@@ -949,47 +949,47 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* ProjectCard */
 .custom-lg-xl-modal .modal-dialog {
-  max-width: 100%; /* Between lg and xl */
+  max-width: 100%; 
 }
 
 .custom-modal {
-  z-index: 2000; /* Ensure modal wrapper has high z-index */
+  z-index: 2000; 
 }
 
 .custom-modal .modal-content {
-  background-image: url("../src/assets/img/banner-bg.png"); /* Adjust the path as needed */
+  background-image: url("../src/assets/img/banner-bg.png"); 
   background-size: cover;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.8); /* Add a background color with transparency */
-  border-radius: 20px; /* Rounded corners */
-  color: #ffffff; /* Text color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-  z-index: 2000; /* Ensure modal content appears above the navigation bar */
+  background-color: rgba(0, 0, 0, 0.8); 
+  border-radius: 20px; 
+  color: #ffffff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  z-index: 2000; 
 }
 
 .custom-modal .modal-header {
-  border-bottom: none; /* Remove border from header */
+  border-bottom: none;
 }
 
 .scrollable-modal-body {
-  max-height: 850px; /* Adjust max height as needed */
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding: 30px; /* Adjust padding to your liking */
+  max-height: 850px;
+  overflow-y: auto; 
+  padding: 30px; 
 }
 
 .custom-modal .modal-footer {
-  border-top: none; /* Remove border from footer */
+  border-top: none; 
 }
 
 .custom-modal .modal-title {
-  font-size: 24px; /* Adjust title size */
+  font-size: 24px;
   font-weight: bold;
 }
 
 .custom-modal .btn-secondary {
-  background-color: #a64ff7; /* Button color */
+  background-color: #a64ff7; 
   border: none;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px; 
   font-weight: bold;
 }
 
