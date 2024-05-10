@@ -1,10 +1,11 @@
+/************ General Layout ************/
 body, .full-page-container {
-  background-image: url('./assets/img/banner-bg.png'); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  height: 100vh; 
-  width: 100vw; 
+  background-image: url('./assets/img/banner-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
 }
 
 #root .container {
@@ -16,36 +17,35 @@ body, .full-page-container {
   background-color: #1e2127;
   color: #abb2bf;
   padding: 20px;
-  padding-right: 6px; 
+  padding-right: 6px;
   padding-top: 30px;
   font-family: 'Courier New', monospace;
   border-radius: 10px;
-  width: 539px; 
+  width: 539px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  margin-right: 20px; 
+  margin-right: 20px;
   margin-top: 8px;
   transform: translateX(429px) translateY(89px);
 }
 
 .text-area {
-  width: 40%;  
+  width: 40%;
   padding: 20px;
-  color: #e7e4e4; 
+  color: #e7e4e4;
   font-weight: 700;
   font-size: 35px;
-  background-color: rgba(244, 244, 244, 0);  
-  transform: translateX(205px) translateY(-759px); 
-  min-height: 85px; 
+  background-color: rgba(244, 244, 244, 0);
+  transform: translateX(205px) translateY(-759px);
+  min-height: 85px;
 }
-
 
 #root .text-area p {
   transform: translateX(9px) translateY(-30px);
-  width: 1000px; 
+  width: 1000px;
 }
 
 .code-editor {
-  background-color: rgba(255, 255, 255, 0.05); 
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -54,7 +54,7 @@ body, .full-page-container {
 .terminal pre {
   white-space: pre-wrap;
   word-wrap: break-word;
-  margin: 0; 
+  margin: 0;
 }
 
 .job-statuses {
@@ -100,20 +100,98 @@ body, .full-page-container {
 
 @keyframes fadeOut {
   from {
-      opacity: 1;
+    opacity: 1;
   }
   to {
-      opacity: 0;
-      visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
-.background-image-left { 
+.background-image-left {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; 
+  z-index: -1;
   opacity: 0.5;
+}
+
+/************ Responsive Adjustments ************/
+@media (max-width: 768px) {
+  #root .container {
+    transform: translateX(-20px) translateY(20px);
+    padding-left: 4px;
+  }
+
+  .text-area {
+    width: 80%;
+    font-size: 28px; 
+    padding: 10px;
+    transform: translateX(0px) translateY(20px);
+    margin: 0 auto; 
+    min-height: 70px;
+  }
+
+  #root .text-area p {
+    transform: translateX(0px) translateY(0px);
+    width: 100%; 
+  }
+
+  .terminal {
+    width: 80%; 
+    transform: translateX(0px) translateY(70px);
+    margin: 0 auto; 
+    margin-top: 20px;
+  }
+
+  .job-status {
+    font-size: 14px;
+  }
+
+  .terminal button {
+    width: 80%;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #root .container {
+    transform: translateX(0px) translateY(0px); 
+    padding-left: 2px;
+  }
+
+  .text-area {
+    width: 90%;
+    font-size: 24px;
+    padding: 8px;
+    transform: translateX( 0px) translateY(-840px);
+    margin: 0 auto;
+    min-height: 60px;
+  }
+
+  #root .text-area p {
+    transform: translateX(0px) translateY(0px);
+    width: 100%;
+  }
+
+  .terminal {
+    width: 90%;
+    transform: translateX(0px) translateY(0px); 
+    margin: 0 auto; 
+    margin-top: 100px;
+    padding: 15px;
+  }
+
+  .job-status {
+    font-size: 12px;
+  }
+
+  .terminal button {
+    width: 90%;
+    font-size: 12px;
+    padding: 8px 16px;
+  }
 }
